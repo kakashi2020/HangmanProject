@@ -7,7 +7,7 @@ while letter != word.casefold():
         print("Game Over")
         break
     elif letter in word.casefold():
-        print("There is one or more letters {} in the word you are guessing".format(letter))
+        print("There are {} letter(s) {} in the word you are guessing".format(word.count(letter), letter))
     else:
         print("There's no letter {} in the word you are guessing".format(letter))
     letter = input("Guess another letter or word, or write 'Exit' to end the game ")
@@ -16,5 +16,6 @@ else:
 
 
 #Changes to make:
-  #- Provide position of the letter.
+  #- Provide position of the letter - CHECK
+  #- Display answer of amount of letters in singular if there's only 1 of the chosen letter in the word. Else display anser in plural   
   #- Random Words
